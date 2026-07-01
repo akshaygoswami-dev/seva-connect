@@ -481,16 +481,16 @@ p {
     min-height: 80vh;
     background-size: cover;
     /* The heart is on the right side of the original image!
-       By shifting the focal point to 85% horizontally, the heart becomes perfectly centered on mobile. */
-    background-position: 85% 15%; 
+       By shifting the focal point to 85% top, the heart is perfectly centered and the top of the head is not cropped! */
+    background-position: 85% top; 
     background-repeat: no-repeat;
     align-items: center; /* Text directly ON the image */
     padding: 2rem 0;
   }
   .hero-immersive-overlay {
     display: block;
-    /* Strong uniform overlay so the text is readable when placed ON TOP of the heart */
-    background: rgba(10, 15, 30, 0.65);
+    /* Gradient: lighter at the top to see the heart, very dark where the text is for max readability */
+    background: linear-gradient(to bottom, rgba(10,15,30,0.4) 0%, rgba(10,15,30,0.85) 45%, rgba(10,15,30,0.95) 100%);
   }
   .hero-immersive-content {
     padding: 0 1.5rem !important;
@@ -501,11 +501,13 @@ p {
     font-size: clamp(1.8rem, 7vw, 2.5rem);
     margin-bottom: 0.75rem;
     text-align: center;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.9); /* Makes the white text pop massively */
   }
   .hero-immersive-content p {
     font-size: 1.05rem;
     margin-bottom: 1.5rem;
     text-align: center;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.9);
   }
   /* Constrain hero impact image so it never overflows */
   .hero-impact-image {
