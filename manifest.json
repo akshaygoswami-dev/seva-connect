@@ -1,0 +1,23 @@
+{
+  "name": "Seva Connect",
+  "short_name": "Seva",
+  "description": "A humanitarian initiative focused on community help, emergency guidance, and meaningful social service.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#1B365D",
+  "icons": [
+    {
+      "src": "images/seva-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/seva-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
