@@ -478,16 +478,18 @@ p {
   /* Fix iOS background-attachment: fixed rendering bug */
   .hero-immersive {
     background-attachment: scroll;
-    min-height: 75vh;
+    min-height: 80vh;
     background-size: cover;
-    background-position: center center;
+    /* The heart is on the right side of the original image!
+       By shifting the focal point to 85% horizontally, the heart becomes perfectly centered on mobile. */
+    background-position: 85% 15%; 
     background-repeat: no-repeat;
-    align-items: center; /* Center the text vertically on the image */
+    align-items: center; /* Text directly ON the image */
     padding: 2rem 0;
   }
   .hero-immersive-overlay {
     display: block;
-    /* A premium, uniform dark overlay so the white text reads perfectly ON TOP of the image */
+    /* Strong uniform overlay so the text is readable when placed ON TOP of the heart */
     background: rgba(10, 15, 30, 0.65);
   }
   .hero-immersive-content {
