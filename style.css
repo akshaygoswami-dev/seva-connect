@@ -479,12 +479,20 @@ p {
   .hero-immersive {
     background-attachment: scroll;
     min-height: 70vh;
+    background-position: center 25%;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+  }
+  .hero-immersive-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0.85) 100%);
   }
   .hero-immersive-content h1 {
     font-size: clamp(1.75rem, 6vw, 2.5rem);
+    margin-bottom: 0.5rem;
   }
   .hero-immersive-content p {
     font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
   /* Constrain hero impact image so it never overflows */
   .hero-impact-image {
@@ -508,8 +516,8 @@ p {
 
 @media (max-width: 480px) {
   .hero-immersive {
-    background-position: 80% center;
-    min-height: 60vh;
+    background-position: center 20%;
+    min-height: 75vh;
   }
   .hero-impact-image img {
     max-height: 240px;
@@ -518,9 +526,13 @@ p {
   .hero-impact-text h2 {
     font-size: 1.5rem;
   }
-  /* Tighten article content padding on tiny screens */
-  .article-content {
-    padding: 0 0.5rem;
+  /* Premium readability: wider margins on mobile */
+  .container {
+    padding: 0 1.25rem;
+  }
+  p, li {
+    font-size: 1.05rem;
+    line-height: 1.7;
   }
 }
 
@@ -1725,17 +1737,19 @@ p {
 
   .founder-photo {
     width: 100%;
-    height: auto;
-    max-height: 220px;
+    height: 100%;
     object-fit: cover;
+    object-position: center 10%; /* Precisely avoids forehead crop */
   }
   
   .founder-photo-wrap {
-    width: 160px;
-    max-width: 160px;
+    width: 150px;
+    height: 150px; /* Perfect square */
     margin: 0 auto 1.5rem;
-    border-radius: 50%;
+    border-radius: 24px; /* Premium curved rectangle */
     overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    border: 3px solid white;
   }
 
   .founder-quote {
