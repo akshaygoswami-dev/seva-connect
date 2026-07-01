@@ -478,16 +478,17 @@ p {
   /* Fix iOS background-attachment: fixed rendering bug */
   .hero-immersive {
     background-attachment: scroll;
-    min-height: 80vh;
-    background-size: 100% auto;
-    background-position: top center;
+    min-height: 85vh;
+    background-size: cover;
+    background-position: center 10%; /* Forces the heart into perfect view at the top */
     background-repeat: no-repeat;
     background-color: #0f172a;
     align-items: flex-end;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem; /* Pushes text even lower so it doesn't touch the heart */
   }
   .hero-immersive-overlay {
-    background: linear-gradient(to bottom, rgba(15,23,42,0) 0%, rgba(15,23,42,0.7) 40%, #0f172a 75%);
+    /* Smooth gradient that is totally clear at the top and very dark behind the text */
+    background: linear-gradient(to bottom, rgba(15,23,42,0) 0%, rgba(15,23,42,0.4) 45%, rgba(15,23,42,0.95) 100%);
   }
   .hero-immersive-content {
     padding: 0 1.5rem !important;
