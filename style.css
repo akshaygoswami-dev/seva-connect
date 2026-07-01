@@ -478,20 +478,17 @@ p {
   /* Fix iOS background-attachment: fixed rendering bug */
   .hero-immersive {
     background-attachment: scroll;
-    min-height: 80vh;
-    /* Show the full uncropped image, and perfectly fade its bottom edge into the dark background */
-    background-image: 
-      linear-gradient(to bottom, rgba(15,23,42,0) 0vw, rgba(15,23,42,0) 30vw, rgba(15,23,42,1) 55vw),
-      url('images/hero-banner.jpg');
-    background-size: 100% 100%, 100% auto;
-    background-position: top center, top center;
-    background-repeat: no-repeat, no-repeat;
-    background-color: #0f172a;
-    align-items: flex-end;
-    padding-bottom: 3rem;
+    min-height: 75vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    align-items: center; /* Center the text vertically on the image */
+    padding: 2rem 0;
   }
   .hero-immersive-overlay {
-    display: none; /* The seamless gradient in background-image handles this perfectly now */
+    display: block;
+    /* A premium, uniform dark overlay so the white text reads perfectly ON TOP of the image */
+    background: rgba(10, 15, 30, 0.65);
   }
   .hero-immersive-content {
     padding: 0 1.5rem !important;
