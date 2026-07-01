@@ -395,16 +395,18 @@ p {
 
 .hero-tag {
   display: inline-block;
-  background: rgba(230, 57, 70, 0.1);
-  backdrop-filter: blur(8px);
-  color: var(--accent);
-  border: 1px solid rgba(230, 57, 70, 0.3);
+  background: rgba(0, 0, 0, 0.5); /* Premium dark glass */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff; /* Pure white text for pop */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white rim */
   font-size: 0.85rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
+  margin-bottom: 1rem;
 }
 
 .hero-split-actions {
