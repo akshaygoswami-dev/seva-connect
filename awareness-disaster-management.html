@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disaster Management – Awareness Hub | Seva Connect</title>
+  <meta name="description" content="Learn how to prepare for floods, cyclones, and natural disasters in Barak Valley. Build emergency kits, understand evacuation routes, and support community disaster response.">
+  <meta name="theme-color" content="#1B365D">
+  <link rel="icon" type="image/png" href="images/seva-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .article-header-env { background-color: var(--primary-light); padding: 4rem 0 3rem; text-align: center; border-bottom: 1px solid var(--border); }
+    [data-theme="dark"] .article-header-env { background-color: rgba(255,255,255,0.05); }
+    .article-meta { font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem; }
+    .article-meta span { display: flex; align-items: center; gap: 0.4rem; }
+    .article-hero-img { max-width: 420px; margin: 2rem auto; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+    .article-hero-img img { width: 100%; height: auto; display: block; object-fit: cover; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/seva-logo-full.png" alt="Seva Connect" class="brand-icon">
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="awareness.html" class="nav-link active">Awareness</a>
+        <a href="index.html#volunteer" class="nav-link">Volunteer</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="index.html#contact" class="btn-premium">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Need Help?
+        </a>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">Menu</span>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+    </div>
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="index.html#about" class="mobile-nav-link">About</a>
+    <a href="awareness.html" class="mobile-nav-link active">Awareness Hub</a>
+    <a href="index.html#volunteer" class="mobile-nav-link">Volunteer</a>
+    <a href="events.html" class="mobile-nav-link">Events</a>
+    <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+    <div class="mobile-nav-footer">
+      <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span class="theme-label">Appearance</span>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary" style="width:100%; margin-top:1rem;">Need Help?</a>
+    </div>
+  </nav>
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  <main>
+    <div class="article-header-env">
+      <div class="container fade-up">
+        <span style="display: inline-block; padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.03em; margin-bottom: 1rem; background-color: var(--primary); color: white;">Disaster Relief</span>
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem);">Disaster Management: Preparing for the Unpredictable</h1>
+        <div class="article-meta">
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 min read</span>
+          <span>&bull;</span>
+          <span>Updated: June 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Illustration -->
+    <div class="article-hero-img fade-up">
+      <img src="images/aw_disaster_1782756280993.png" alt="Illustration representing disaster management and flood preparedness">
+    </div>
+
+    <section class="article-body">
+      <div class="article-content fade-up">
+        <p class="lead" style="font-size: 1.2rem; color: var(--text); font-weight: 500; margin-bottom: 2rem;">
+          The Barak Valley is one of the most flood-prone regions in India. Every monsoon season — from May through September — the Barak River and its tributaries swell beyond capacity, inundating villages, destroying crops, displacing thousands of families, and cutting off critical road and rail links for weeks. Disaster preparedness is not optional here — it is a survival skill.
+        </p>
+
+        <h2>Living in a Flood Zone</h2>
+        <p>
+          The three districts of Barak Valley — Cachar, Karimganj, and Hailakandi — collectively experience severe flooding almost every year. The catastrophic floods of June 2022 submerged over 80% of Silchar town, affecting nearly 2 lakh people and causing damages worth hundreds of crores. Climate change is intensifying rainfall patterns: the India Meteorological Department (IMD) has recorded a measurable increase in extreme rainfall events across Northeast India over the past two decades, making historically "rare" floods increasingly frequent.
+        </p>
+        <p>
+          Beyond river flooding, the Barak Valley faces risks from landslides along hilly terrain in southern Cachar, urban waterlogging due to clogged drainage systems in Silchar, and the occasional cyclonic storm that tracks northward from the Bay of Bengal. These compound hazards demand a multi-layered preparedness approach.
+        </p>
+
+        <div style="background-color: var(--bg); padding: 1.5rem; border-left: 4px solid var(--accent); margin: 2rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+          <h3 style="margin-top: 0; font-size: 1.15rem; color: var(--accent);">Key Facts</h3>
+          <ul style="margin-bottom: 0;">
+            <li>The 2022 Silchar floods displaced over 1.8 lakh people and submerged the town for more than 10 consecutive days.</li>
+            <li>India's National Disaster Response Force (NDRF) maintains battalions specifically trained for flood rescue operations in the Northeast.</li>
+            <li>A basic emergency kit — water, dry food, medicines, documents, flashlight, and a charged phone — can sustain a family for 72 critical hours.</li>
+            <li>The NDMA helpline (1078) and the Assam State Disaster Management Authority provide real-time flood alerts and evacuation guidance.</li>
+          </ul>
+        </div>
+
+        <h2>Building Your Emergency Kit</h2>
+        <p>
+          Every household in the Barak Valley should maintain a waterproof grab-bag ready before the monsoon season begins. Essential items include: 5 liters of bottled drinking water per person, non-perishable food (chira, gur, biscuits, ORS packets), a basic first-aid kit with prescribed medications, photocopies of Aadhaar cards and important documents sealed in plastic, a battery-powered flashlight with extra batteries, a fully charged power bank, cash in small denominations, and waterproof bags for electronics. Place this bag in an easily accessible, elevated location in your home.
+        </p>
+
+        <h2>What You Can Do</h2>
+        <ul>
+          <li><strong>Know your evacuation route:</strong> Identify the nearest elevated ground, relief camp, or school building designated as a flood shelter in your area. Practice the route with your family before the monsoon arrives.</li>
+          <li><strong>Stay informed:</strong> Follow IMD weather alerts, Assam SDMA updates, and local administration announcements on social media and All India Radio. Early warning saves lives.</li>
+          <li><strong>Prepare your home:</strong> Elevate electrical installations, store valuables on upper floors, clear drains and culverts around your property, and reinforce embankments if you live near the river.</li>
+          <li><strong>Support community response:</strong> Volunteer with local flood relief teams. Skills like first aid, boat operation, and supply distribution are invaluable during emergencies.</li>
+          <li><strong>Post-flood hygiene:</strong> After floodwaters recede, drink only boiled or treated water, watch for waterborne diseases like cholera and leptospirosis, and ensure proper disposal of animal carcasses and debris to prevent epidemics.</li>
+        </ul>
+
+        <div class="article-cta">
+          <h3 style="margin-top: 0;">Take Action</h3>
+          <p>Join the Seva Connect disaster response volunteer network. From distributing relief supplies to helping families rebuild, your hands can make the difference when the waters rise. Pre-monsoon preparedness drives are conducted every April–May across Cachar, Karimganj, and Hailakandi.</p>
+          <a href="index.html#volunteer" class="btn btn-primary">Join Our Volunteers</a>
+        </div>
+
+        <div style="margin-top: 3rem;">
+          <h3 style="font-size: 1.1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Trusted Resources</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;"><a href="https://ndma.gov.in/" target="_blank" style="color: var(--primary); text-decoration: underline;">National Disaster Management Authority (NDMA) — India</a></li>
+            <li><a href="https://sdmassam.nic.in/" target="_blank" style="color: var(--primary); text-decoration: underline;">Assam State Disaster Management Authority (ASDMA)</a></li>
+          </ul>
+        </div>
+
+        <div class="article-nav" style="display: flex; justify-content: space-between; align-items: center;">
+          <a href="awareness-food-safety.html" style="color: var(--text-muted);">← Food Safety</a>
+          <a href="awareness-ai-technology.html">AI Technology →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center" style="padding-bottom: 2rem;">
+      <p style="font-size: 0.85rem; color: var(--text-light); margin: 0;">&copy; 2026 Seva Connect. Built for service, awareness, and community support.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -39,15 +39,15 @@
   <!-- ─── HEADER ─── -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="Seva Connect Home">
+      <a aria-label='Seva Connect Home' class='brand' href='/'>
         <img src="images/seva-logo-full.png" alt="Seva Connect" class="brand-icon">
       </a>
 
       <nav class="nav-desktop" id="navDesktop" aria-label="Main navigation">
-        <a href="index.html" class="nav-link active">Home</a>
+        <a class='nav-link active' href='/'>Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#volunteer" class="nav-link">Volunteer</a>
-        <a href="events.html" class="nav-link">Events</a>
+        <a class='nav-link' href='/events'>Events</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
@@ -69,10 +69,10 @@
       <span class="mobile-nav-title">Menu</span>
       <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
     </div>
-    <a href="index.html" class="mobile-nav-link active">Home</a>
+    <a class='mobile-nav-link active' href='/'>Home</a>
     <a href="#about" class="mobile-nav-link">About</a>
     <a href="#volunteer" class="mobile-nav-link">Volunteer</a>
-    <a href="events.html" class="mobile-nav-link">Events</a>
+    <a class='mobile-nav-link' href='/events'>Events</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
     <a href="#faq" class="mobile-nav-link">FAQ</a>
     <div class="mobile-nav-footer">
@@ -100,7 +100,7 @@
         <p>Seva Connect is a humanitarian platform that bridges the gap between people who need help and people who want to help — through emergency guidance, blood donation coordination, volunteer networks, and community awareness.</p>
         <div class="hero-split-actions">
           <a href="#contact" class="btn btn-primary">Get Community Support</a>
-          <a href="awareness.html" class="btn btn-outline" style="background-color: var(--surface); color: var(--text); border-color: var(--border);">Explore Awareness Hub</a>
+          <a class='btn btn-outline' href='/awareness' style='background-color: var(--surface); color: var(--text); border-color: var(--border);'>Explore Awareness Hub</a>
         </div>
       </div>
     </div>
@@ -150,7 +150,7 @@
     </section>
 
     <!-- ─── MISSION ─── -->
-    <section class="section" id="about">
+    <section class="section" id="mission">
       <div class="container">
         <div class="section-header fade-up">
           <span class="section-tag">Our Mission</span>
@@ -254,7 +254,7 @@
             <div class="editorial-content">
               <h3 style="color: #6B46C1;">Awareness &amp; Education</h3>
               <p>Spreading knowledge, promoting healthy habits, and building awareness for a more informed and responsible society.</p>
-              <a href="awareness.html" class="btn btn-primary" style="background-color: #6B46C1; color: #fff;">Explore Awareness &rarr;</a>
+              <a class='btn btn-primary' href='/awareness' style='background-color: #6B46C1; color: #fff;'>Explore Awareness &rarr;</a>
             </div>
           </article>
 
@@ -306,7 +306,7 @@
         </div>
 
         <div class="awareness-preview-grid">
-          <a href="awareness.html" class="awareness-preview-card fade-up">
+          <a class='awareness-preview-card fade-up' href='/awareness'>
             <div class="awareness-preview-header env">
               <span class="awareness-category">Environment</span>
             </div>
@@ -317,7 +317,7 @@
             </div>
           </a>
 
-          <a href="awareness.html" class="awareness-preview-card fade-up">
+          <a class='awareness-preview-card fade-up' href='/awareness'>
             <div class="awareness-preview-header health">
               <span class="awareness-category">Health</span>
             </div>
@@ -328,7 +328,7 @@
             </div>
           </a>
 
-          <a href="awareness.html" class="awareness-preview-card fade-up">
+          <a class='awareness-preview-card fade-up' href='/awareness'>
             <div class="awareness-preview-header social">
               <span class="awareness-category">Wellbeing</span>
             </div>
@@ -341,7 +341,7 @@
         </div>
 
         <div class="text-center fade-up" style="margin-top: 2.5rem;">
-          <a href="awareness.html" class="btn btn-secondary">Explore all Awareness Topics</a>
+          <a class='btn btn-secondary' href='/awareness'>Explore all Awareness Topics</a>
         </div>
       </div>
     </section>
@@ -532,7 +532,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="brand">
+          <a class='brand' href='/'>
             <img src="images/seva-logo-full.png" alt="Seva Connect" class="brand-icon">
           </a>
           <p class="footer-mission">
@@ -547,18 +547,18 @@
           <h4>Quick Links</h4>
           <a href="#about">About Us</a>
           <a href="#volunteer">Volunteer</a>
-          <a href="events.html">Events</a>
+          <a href='/events'>Events</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
-          <a href="awareness.html">Awareness Hub</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="#faq">FAQ</a>
+          <a href='/privacy'>Privacy Policy</a>
+          <a href='/terms'>Terms &amp; Conditions</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Seva Connect. Built for service, awareness, and community support. <br><br> <a href="auth.html" style="color: var(--text-light); text-decoration: none; font-size: 0.8rem;">🔒 Admin Portal</a></p>
+        <p>&copy; 2026 Seva Connect. Built for service, awareness, and community support. <br><br> <a href='/auth' style='color: var(--text-light); text-decoration: none; font-size: 0.8rem;'>🔒 Admin Portal</a></p>
         <p class="footer-disclaimer" style="margin-top: var(--space-4); font-size: 0.75rem; color: var(--text-muted); max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6; padding: 0 var(--space-4); text-align: center;">
           <strong>Disclaimer:</strong> Seva Connect is a community-focused initiative. While we strive to connect people with meaningful opportunities to help, we cannot guarantee assistance, volunteer availability, or emergency response in every situation.
         </p>

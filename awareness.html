@@ -4,122 +4,409 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awareness Hub | Seva Connect</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+  <meta name="description" content="Explore Seva Connect's curated library of 24 community education topics covering health, environment, safety, and wellbeing for the Barak Valley.">
   <meta name="theme-color" content="#1B365D">
+  <link rel="icon" type="image/png" href="images/seva-icon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- ─── SPLASH SCREEN ─── -->
+  <div id="splash-screen" class="splash-screen" aria-hidden="true">
+    <img src="images/seva-logo-full.png" alt="Seva Connect" class="splash-logo">
+  </div>
+
   <!-- ─── HEADER ─── -->
-  <header class="header" id="header">
-    <div class="container header-container">
-      <a href="index.html" class="brand">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-icon"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        <span class="brand-text">Seva Connect</span>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Seva Connect Home">
+        <img src="images/seva-logo-full.png" alt="Seva Connect" class="brand-icon">
       </a>
-      <nav class="nav-desktop">
+      <nav class="nav-desktop" id="navDesktop" aria-label="Main navigation">
         <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#volunteer" class="nav-link">Volunteer</a>
         <a href="events.html" class="nav-link">Events</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
       </nav>
       <div class="header-actions">
-        <button id="themeToggleBtn" class="theme-toggle" aria-label="Toggle dark mode">
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open Menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <a href="index.html#contact" class="btn-premium">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Need Help?
+        </a>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
   <!-- ─── MOBILE NAV ─── -->
-  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-  <nav class="mobile-nav" id="mobileNav">
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
     <div class="mobile-nav-header">
-      <div class="mobile-nav-title">Menu</div>
-      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Menu">&times;</button>
+      <span class="mobile-nav-title">Menu</span>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
     </div>
     <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="index.html#about" class="mobile-nav-link">About</a>
+    <a href="index.html#volunteer" class="mobile-nav-link">Volunteer</a>
     <a href="events.html" class="mobile-nav-link">Events</a>
+    <a href="index.html#contact" class="mobile-nav-link">Contact</a>
     <div class="mobile-nav-footer">
-      <a href="index.html#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Get Community Support</a>
+      <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span class="theme-label">Appearance</span>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary" style="width:100%; margin-top:1rem;">Need Help?</a>
     </div>
   </nav>
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-  <!-- ─── HERO SECTION ─── -->
+  <!-- ─── MAIN CONTENT ─── -->
   <main>
     <section class="section" style="padding-top: 8rem; text-align: center;">
       <div class="container">
         <span class="section-tag">Education</span>
-        <h1 style="font-size: 3rem; margin-bottom: 1rem;">The Awareness Hub</h1>
-        <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem;">
-          Knowledge is power. Browse our curated library of community education topics to learn how you can make a meaningful impact in your daily life.
+        <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">The Awareness Hub</h1>
+        <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem;">
+          Knowledge is power. Browse our curated library of 24 community education topics to learn how you can make a meaningful impact in your daily life.
         </p>
 
-        <div class="awareness-preview-grid">
-          
-          <!-- Article 1 -->
-          <div class="awareness-preview-card" style="text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden;">
-            <div class="awareness-preview-header env">
-              <span class="awareness-category">Environment</span>
-            </div>
-            <div class="awareness-preview-body" style="padding: 2rem;">
-              <h3 style="margin-bottom: 1rem; color: var(--text);">Environmental Protection</h3>
-              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                The Barak Valley's ecosystem is delicate. Understanding our role in protecting forests, water bodies, and biodiversity is crucial. Simple actions like reducing single-use plastics and participating in local clean-up drives can drastically reduce pollution and restore natural habitats for future generations.
-              </p>
-            </div>
-          </div>
+        <div class="awareness-hub-grid">
 
-          <!-- Article 2 -->
-          <div class="awareness-preview-card" style="text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden;">
-            <div class="awareness-preview-header health">
-              <span class="awareness-category">Health</span>
+          <!-- 1. Blood Donation -->
+          <a href="awareness-blood-donation.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/aw_blood_1782756041320.png" alt="Blood Donation" class="aw-3d-img">
+              <span class="awareness-card-tag health">Health</span>
             </div>
-            <div class="awareness-preview-body" style="padding: 2rem;">
-              <h3 style="margin-bottom: 1rem; color: var(--text);">Blood Donation</h3>
-              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                Every single donation can save up to three lives. Blood cannot be manufactured; it can only come from generous donors. Regular blood donation not only saves patients facing surgery, trauma, or chronic illnesses, but it also improves the cardiovascular health of the donor. 
-              </p>
+            <div class="awareness-hub-card-body">
+              <h3>Blood Donation</h3>
+              <p>Every donation saves up to three lives. Learn why regular blood donation is critical for our community.</p>
             </div>
-          </div>
+          </a>
 
-          <!-- Article 3 -->
-          <div class="awareness-preview-card" style="text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden;">
-            <div class="awareness-preview-header social">
-              <span class="awareness-category">Wellbeing</span>
+          <!-- 2. First Aid -->
+          <a href="awareness-first-aid.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/aw_firstaid_1782756065509.png" alt="First Aid" class="aw-3d-img">
+              <span class="awareness-card-tag health">Health</span>
             </div>
-            <div class="awareness-preview-body" style="padding: 2rem;">
-              <h3 style="margin-bottom: 1rem; color: var(--text);">Mental Health</h3>
-              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                Mental health is just as important as physical health. Breaking the stigma in our community starts with encouraging open, compassionate conversations. If you or someone you know is struggling with anxiety or depression, reaching out to local support groups or verified counselors is the first step toward healing.
-              </p>
+            <div class="awareness-hub-card-body">
+              <h3>Basic First Aid</h3>
+              <p>Essential life-saving techniques everyone should know — from CPR to wound care.</p>
             </div>
-          </div>
+          </a>
 
-          <!-- Article 4 -->
-          <div class="awareness-preview-card" style="text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden;">
-            <div class="awareness-preview-header env" style="background-color: var(--primary-light);">
-              <span class="awareness-category" style="color: var(--primary-dark);">Disaster Relief</span>
+          <!-- 3. Mental Health -->
+          <a href="awareness-mental-health.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #F3F4F6;">
+              <img src="images/aw_mental_1782756086878.png" alt="Mental Health" class="aw-3d-img">
+              <span class="awareness-card-tag social">Wellbeing</span>
             </div>
-            <div class="awareness-preview-body" style="padding: 2rem;">
-              <h3 style="margin-bottom: 1rem; color: var(--text);">Flood Preparedness</h3>
-              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                Our region is prone to heavy flooding. Being prepared saves lives. Always keep an emergency kit ready with first-aid, flashlights, non-perishable food, and essential documents in waterproof bags. During floods, follow community leaders and utilize Seva Connect's volunteer network for safe evacuation routes.
-              </p>
+            <div class="awareness-hub-card-body">
+              <h3>Mental Health</h3>
+              <p>Breaking stigmas and building resilience through open, compassionate conversations.</p>
             </div>
-          </div>
+          </a>
+
+          <!-- 4. Environmental Protection -->
+          <a href="awareness-environmental-protection.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #E8EDF2;">
+              <img src="images/aw_environment_1782756102116.png" alt="Environmental Protection" class="aw-3d-img">
+              <span class="awareness-card-tag env">Environment</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Environmental Protection</h3>
+              <p>Protecting forests, water bodies, and biodiversity in the Barak Valley for future generations.</p>
+            </div>
+          </a>
+
+          <!-- 5. Sustainable Living -->
+          <a href="awareness-sustainable-living.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #E8EDF2;">
+              <img src="images/aw_sustainable_1782756139288.png" alt="Sustainable Living" class="aw-3d-img">
+              <span class="awareness-card-tag env">Environment</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Sustainable Living</h3>
+              <p>Small daily changes that create lasting environmental impact for our communities.</p>
+            </div>
+          </a>
+
+          <!-- 6. Women's Safety -->
+          <a href="awareness-womens-safety.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #F3F4F6;">
+              <img src="images/aw_womensafety_1782756159711.png" alt="Women's Safety" class="aw-3d-img">
+              <span class="awareness-card-tag social">Safety</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Women's Safety</h3>
+              <p>Empowering women through awareness of legal rights, self-defense, and community support systems.</p>
+            </div>
+          </a>
+
+          <!-- 7. Child Protection -->
+          <a href="awareness-child-protection.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #F3F4F6;">
+              <img src="images/aw_child_1782756169253.png" alt="Child Protection" class="aw-3d-img">
+              <span class="awareness-card-tag social">Safety</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Child Protection</h3>
+              <p>Safeguarding children from abuse, exploitation, and neglect in our communities.</p>
+            </div>
+          </a>
+
+          <!-- 8. Cyber Security -->
+          <a href="awareness-cyber-security.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #E8EDF2;">
+              <img src="images/aw_cyber_1782756201851.png" alt="Cyber Security" class="aw-3d-img">
+              <span class="awareness-card-tag" style="background-color: #1B365D; color: white;">Digital</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Cyber Security</h3>
+              <p>Staying safe online — protecting yourself from scams, phishing, and digital fraud.</p>
+            </div>
+          </a>
+
+          <!-- 9. Road Safety -->
+          <a href="awareness-road-safety.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/aw_road_1782756225849.png" alt="Road Safety" class="aw-3d-img">
+              <span class="awareness-card-tag health">Safety</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Road Safety</h3>
+              <p>Preventing accidents through awareness of traffic rules, helmet use, and pedestrian safety.</p>
+            </div>
+          </a>
+
+          <!-- 10. Food Safety -->
+          <a href="awareness-food-safety.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/aw_food_1782756269162.png" alt="Food Safety" class="aw-3d-img">
+              <span class="awareness-card-tag health">Health</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Food Safety</h3>
+              <p>Understanding food hygiene, contamination risks, and safe storage practices for healthier lives.</p>
+            </div>
+          </a>
+
+          <!-- 11. Disaster Management -->
+          <a href="awareness-disaster-management.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: var(--primary-light);">
+              <img src="images/aw_disaster_1782756280993.png" alt="Disaster Management" class="aw-3d-img">
+              <span class="awareness-card-tag" style="background-color: var(--primary); color: white;">Disaster Relief</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Disaster Management</h3>
+              <p>Flood preparedness, emergency kits, and evacuation planning for the Barak Valley.</p>
+            </div>
+          </a>
+
+          <!-- 12. AI & Technology -->
+          <a href="awareness-ai-technology.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #E8EDF2;">
+              <img src="images/aw_ai_1782756368384.png" alt="AI Technology" class="aw-3d-img">
+              <span class="awareness-card-tag" style="background-color: #1B365D; color: white;">Digital</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>AI & Technology</h3>
+              <p>Understanding artificial intelligence, its benefits, risks, and impact on modern society.</p>
+            </div>
+          </a>
+
+          <!-- 13. Plastic Pollution -->
+          <a href="awareness-plastic-pollution.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #E8EDF2;">
+              <img src="images/aw_plastic_1782756387330.png" alt="Plastic Pollution" class="aw-3d-img">
+              <span class="awareness-card-tag env">Environment</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Plastic Pollution</h3>
+              <p>The devastating impact of single-use plastics on our rivers, soil, and wildlife.</p>
+            </div>
+          </a>
+
+          <!-- 14. Water Conservation -->
+          <a href="awareness-water-conservation.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #E8EDF2;">
+              <img src="images/aw_water_1782756415203.png" alt="Water Conservation" class="aw-3d-img">
+              <span class="awareness-card-tag env">Environment</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Water Conservation</h3>
+              <p>Protecting our most precious resource through household and community-level conservation.</p>
+            </div>
+          </a>
+
+          <!-- 15. Water Contamination -->
+          <a href="awareness-water-contamination.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/aw_water_1782756415203.png" alt="Water Contamination" class="aw-3d-img">
+              <span class="awareness-card-tag health">Health</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Water Contamination</h3>
+              <p>Understanding waterborne diseases, contamination sources, and purification methods.</p>
+            </div>
+          </a>
+
+          <!-- 16. AMR (Antimicrobial Resistance) -->
+          <a href="awareness-amr.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/3d_bacteria_amr_1782827068825.png" alt="Antimicrobial Resistance" class="aw-3d-img">
+              <span class="awareness-card-tag health">Health</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Antimicrobial Resistance</h3>
+              <p>The silent pandemic of drug-resistant superbugs threatening modern medicine.</p>
+            </div>
+          </a>
+
+          <!-- 17. Scrub Typhus -->
+          <a href="awareness-scrub-typhus.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/3d_grass_mite_1782827058340.png" alt="Scrub Typhus" class="aw-3d-img">
+              <span class="awareness-card-tag health">Health</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Scrub Typhus</h3>
+              <p>A deadly mite-borne disease prevalent in our region — symptoms, prevention, and treatment.</p>
+            </div>
+          </a>
+
+          <!-- 18. Stunting & Parasites -->
+          <a href="awareness-stunting-parasites.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/3d_intestinal_parasite_1782827092520.png" alt="Stunting and Parasites" class="aw-3d-img">
+              <span class="awareness-card-tag health">Health</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Stunting & Parasites</h3>
+              <p>How intestinal parasites cause childhood malnutrition and stunted growth in rural India.</p>
+            </div>
+          </a>
+
+          <!-- 19. Vector-Borne Diseases -->
+          <a href="awareness-vector-disease.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/3d_mosquito_water_1782827004601.png" alt="Vector-Borne Diseases" class="aw-3d-img">
+              <span class="awareness-card-tag health">Health</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Vector-Borne Diseases</h3>
+              <p>Dengue, malaria, and Japanese encephalitis — prevention starts with mosquito control.</p>
+            </div>
+          </a>
+
+          <!-- 20. Zero Dose Children -->
+          <a href="awareness-zero-dose.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/3d_vaccine_drop_1782827102840.png" alt="Zero Dose Children" class="aw-3d-img">
+              <span class="awareness-card-tag health">Health</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Zero Dose Children</h3>
+              <p>Millions of children miss life-saving vaccines. Understanding the zero-dose crisis.</p>
+            </div>
+          </a>
+
+          <!-- 21. Waste Dumping -->
+          <a href="awareness-waste-dumping.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #E8EDF2;">
+              <img src="images/3d_waste_dumping_1782826993790.png" alt="Waste Dumping" class="aw-3d-img">
+              <span class="awareness-card-tag env">Environment</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Waste Dumping</h3>
+              <p>The environmental and health consequences of unregulated waste disposal in our region.</p>
+            </div>
+          </a>
+
+          <!-- 22. Water Purification -->
+          <a href="awareness-water-purification.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #E8EDF2;">
+              <img src="images/3d_water_filter_1782827017249.png" alt="Water Purification" class="aw-3d-img">
+              <span class="awareness-card-tag env">Environment</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Water Purification</h3>
+              <p>Affordable, effective water purification methods for households without access to clean water.</p>
+            </div>
+          </a>
+
+          <!-- 23. Youth Mental Health -->
+          <a href="awareness-youth-mental-health.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #F3F4F6;">
+              <img src="images/3d_brain_health_1782827117126.png" alt="Youth Mental Health" class="aw-3d-img">
+              <span class="awareness-card-tag social">Wellbeing</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Youth Mental Health</h3>
+              <p>Addressing the mental health crisis among students — exam stress, social media, and isolation.</p>
+            </div>
+          </a>
+
+          <!-- 24. Zoonotic Diseases -->
+          <a href="awareness-zoonotic.html" class="awareness-hub-card fade-up">
+            <div class="awareness-preview-header" style="background-color: #FCEBEB;">
+              <img src="images/3d_zoonotic_virus_1782827046841.png" alt="Zoonotic Diseases" class="aw-3d-img">
+              <span class="awareness-card-tag health">Health</span>
+            </div>
+            <div class="awareness-hub-card-body">
+              <h3>Zoonotic Diseases</h3>
+              <p>How diseases jump from animals to humans — and why prevention matters more than ever.</p>
+            </div>
+          </a>
 
         </div>
-        
+
         <div style="margin-top: 4rem;">
           <a href="index.html" class="btn btn-secondary">Return to Homepage</a>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img src="images/seva-logo-full.png" alt="Seva Connect" class="brand-icon">
+          </a>
+          <p class="footer-mission">
+            A humanitarian initiative focused on community help, emergency guidance,
+            blood donation support, and meaningful social service.
+          </p>
+          <p class="footer-email">
+            <a href="mailto:sevaconnectofficial@gmail.com">sevaconnectofficial@gmail.com</a>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html#about">About Us</a>
+          <a href="index.html#volunteer">Volunteer</a>
+          <a href="events.html">Events</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="awareness.html">Awareness Hub</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Seva Connect. Built for service, awareness, and community support.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

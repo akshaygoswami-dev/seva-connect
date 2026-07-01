@@ -474,13 +474,53 @@ p {
   }
 }
 
+@media (max-width: 768px) {
+  /* Fix iOS background-attachment: fixed rendering bug */
+  .hero-immersive {
+    background-attachment: scroll;
+    min-height: 70vh;
+  }
+  .hero-immersive-content h1 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+  .hero-immersive-content p {
+    font-size: 1rem;
+  }
+  /* Constrain hero impact image so it never overflows */
+  .hero-impact-image {
+    max-width: 100%;
+  }
+  .hero-impact-image img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  /* Awareness hub grid: stack to 1 column */
+  .awareness-hub-grid {
+    grid-template-columns: 1fr;
+  }
+  /* Ensure all touch targets are at least 44px */
+  .btn, .mobile-nav-link, .hamburger {
+    min-height: 44px;
+  }
+}
+
 @media (max-width: 480px) {
   .hero-immersive {
     background-position: 80% center;
+    min-height: 60vh;
   }
   .hero-impact-image img {
-    height: 300px;
+    max-height: 240px;
     object-fit: cover;
+  }
+  .hero-impact-text h2 {
+    font-size: 1.5rem;
+  }
+  /* Tighten article content padding on tiny screens */
+  .article-content {
+    padding: 0 0.5rem;
   }
 }
 
@@ -1684,13 +1724,18 @@ p {
   }
 
   .founder-photo {
-    height: 200px;
+    width: 100%;
+    height: auto;
+    max-height: 220px;
     object-fit: cover;
   }
   
   .founder-photo-wrap {
-    width: 200px;
+    width: 160px;
+    max-width: 160px;
     margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
   }
 
   .founder-quote {
