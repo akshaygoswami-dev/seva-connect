@@ -489,8 +489,8 @@ p {
   }
   .hero-immersive-overlay {
     display: block;
-    /* Gradient: lighter at the top to see the heart, very dark where the text is for max readability */
-    background: linear-gradient(to bottom, rgba(10,15,30,0.4) 0%, rgba(10,15,30,0.85) 45%, rgba(10,15,30,0.95) 100%);
+    /* Very subtle overlay so the beautiful tea garden and river are 100% clearly visible! */
+    background: rgba(10, 15, 30, 0.25);
   }
   .hero-immersive-content {
     padding: 0 1.5rem !important;
@@ -501,13 +501,14 @@ p {
     font-size: clamp(1.8rem, 7vw, 2.5rem);
     margin-bottom: 0.75rem;
     text-align: center;
-    text-shadow: 0 4px 24px rgba(0,0,0,0.9); /* Makes the white text pop massively */
+    /* Dual text-shadow acts like an invisible dark box behind the letters, making them pop without ruining the background image */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 8px 30px rgba(0,0,0,0.8);
   }
   .hero-immersive-content p {
     font-size: 1.05rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.9);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.8);
   }
   /* Constrain hero impact image so it never overflows */
   .hero-impact-image {
