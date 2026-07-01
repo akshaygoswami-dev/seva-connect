@@ -480,6 +480,7 @@ p {
   }
   .hero-impact-image img {
     height: 300px;
+    object-fit: cover;
   }
 }
 
@@ -1684,6 +1685,12 @@ p {
 
   .founder-photo {
     height: 200px;
+    object-fit: cover;
+  }
+  
+  .founder-photo-wrap {
+    width: 200px;
+    margin: 0 auto 1.5rem;
   }
 
   .founder-quote {
